@@ -26,3 +26,5 @@
 - La aplicacion deberia estar disponible en http://localhost:3000/ despues de unos momentos
 
 
+link GitLab https://gitlab.com/Francisco-Novoa/frenontest
+link GitHub https://github.com/Francisco-Novoa/frenon-test-front
