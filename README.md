@@ -8,16 +8,14 @@
 - Para darle forma se utilizó la librería material.ui, y tambien se aprovecho de el custom hook que ellos proveen para hacer css in js
 - El estado de la aplicación fue manejado utilizando React Context API
 - La aplicación es responsiva y fue hecha considerando pantallas de todos tamaños
-- De acuerdo a lo pedido, mensajes individuales pueden accederse utilizando la url localhost:3000/mensajes/*id*, 
+- De acuerdo a lo pedido, mensajes individuales pueden accederse utilizando la url localhost:3000/mensajes/*id*
+- el routing de las diferentes "views" fue hecho utilizando react-router-dom
  
 ##### Cómo Ejecutarla.
  
 - Como la aplicación se encuentra dockerizada el proceso de ejecución es sencillo, pero requiere una máquina con docker instalado en caso de carecer tambien dare las instrucciones para ejecutarlo usando npm.
-- Una vez clonado el repositorio se debe ejecutar:
-    *$docker build -t frenontest .*
-- Una vez completada la creación de la imagen se debe correr:
-    *$docker run -ti -p 3000:3000 frenontest*
-- Una vez completado esto la aplicacion deberia estar disponible en http://localhost:3000/
+    *$docker run -ti -p 3000:3000 francisconovoa/frenontest*
+- Este comando buscara la imagen desde dockerhub y ejecutara el comando "npm start" una vez completado el proyecto estara disponible en  http://localhost:3000/
  
 ##### Sin Docker.
  
