@@ -1,5 +1,4 @@
-import React, {useContext} from 'react'
-import { Context } from './store/appContext'
+import React from 'react'
 import injectContext from './store/appContext'
 import { Grid, CssBaseline, makeStyles } from '@material-ui/core'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
@@ -21,7 +20,7 @@ import Graficos from './components/Graficos/graficos'
 import Informes from './components/Informes/informes'
 import NotFound from './components/NotFound/notfound'
 import Configuracion from './components/Configuracion/configuracion'
-import Messages from "./components/Messages/messages"
+import Messages from './components/Messages/messages'
 
 const useStyles = makeStyles(() => ({
     background: {
@@ -68,7 +67,7 @@ const App = () => {
                             <Route exact path='/usuarios' component={Usuarios} />
                             <Route exact path='/graficos' component={Graficos} />
                             <Route exact path='/configuracion' component={Configuracion} />
-                            <Route path="/messages/:id?" render={props =><Messages {...props} />} />
+                            <Route path='/messages/:id?' render={props => <Messages {...props} />} />
                             <Route component={NotFound} />
                         </Switch>
 

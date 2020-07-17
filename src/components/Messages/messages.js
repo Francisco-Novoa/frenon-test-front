@@ -1,18 +1,18 @@
-import React, { useContext, useEffect } from "react"
-import { Context } from "../../store/appContext"
-import { Grid, Paper, Typography, makeStyles } from "@material-ui/core"
+import React, { useContext, useEffect } from 'react'
+import { Context } from '../../store/appContext'
+import { Grid, Paper, Typography, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
     messagecard: {
         padding: '1rem',
-        width: "100%"
+        width: '100%'
     },
     title: {
         textAlign: 'center'
     }
 }))
 
-export default function Messages({ history, location, match }) {
+export default function Messages({ history, match }) {
     const { store, actions } = useContext(Context)
     const classes = useStyles()
     useEffect(() => {
@@ -23,18 +23,18 @@ export default function Messages({ history, location, match }) {
             xs={10}
             spacing={2}
             container
-            justify="center"
-            alignContent="flex-start">
-                <Grid item container xs={12} justify="center">
-                    <Typography variant="h3" >
-                        {
-                            store.message?
-                            "Mensaje"
+            justify='center'
+            alignContent='flex-start'>
+            <Grid item container xs={12} justify='center'>
+                <Typography variant='h3' >
+                    {
+                        store.message ?
+                            'Mensaje'
                             :
-                            "Mensajes"
-                        }
-                    </Typography>
-                </Grid>
+                            'Mensajes'
+                    }
+                </Typography>
+            </Grid>
             {
                 store.message ?
                     store.messages
@@ -53,9 +53,9 @@ export default function Messages({ history, location, match }) {
                                             <Grid container >
                                                 <Grid
                                                     container
-                                                    justify="space-between"
+                                                    justify='space-between'
                                                     item>
-                                                    <Typography variant="h6">
+                                                    <Typography variant='h6'>
                                                         {sender}
                                                     </Typography>
                                                     <Typography>
@@ -63,7 +63,7 @@ export default function Messages({ history, location, match }) {
                                                     </Typography>
                                                 </Grid>
                                                 <Grid item>
-                                                    <Typography variant="caption">
+                                                    <Typography variant='caption'>
                                                         {message}
                                                     </Typography>
                                                 </Grid>
@@ -91,9 +91,9 @@ export default function Messages({ history, location, match }) {
                                             <Grid container >
                                                 <Grid
                                                     container
-                                                    justify="space-between"
+                                                    justify='space-between'
                                                     item>
-                                                    <Typography variant="h6">
+                                                    <Typography variant='h6'>
                                                         {sender}
                                                     </Typography>
                                                     <Typography>
@@ -101,7 +101,7 @@ export default function Messages({ history, location, match }) {
                                                     </Typography>
                                                 </Grid>
                                                 <Grid item>
-                                                    <Typography variant="caption">
+                                                    <Typography variant='caption'>
                                                         {message}
                                                     </Typography>
                                                 </Grid>
